@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         marginBottom: 4,
-        backgroundColor: '#415A77',
+        backgroundColor: '#1595b2',
         padding: 8,
         borderRadius: 10
     },
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     districtName: {
         fontSize: 16,
         fontWeight: '600',
-        color: '#E0E1DD'
+        color: '#1547b2'
     },
     districtDetail: {
         fontSize: 12,
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     },
     appButtonContainer: {
         elevation: 8,
-        backgroundColor: "#1B263B",
+        backgroundColor: "#3f4551",
         borderRadius: 20,
         paddingVertical: 10,
         paddingHorizontal: 12,
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
     },
     appButtonText: {
         fontSize: 14,
-        color: "#E0E1DD",
+        color: "#2d2d2a",
         fontWeight: "bold",
         alignSelf: "center",
         textTransform: "uppercase"
