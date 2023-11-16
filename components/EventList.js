@@ -58,14 +58,14 @@ const eventsArray =[
        distict: 1
     },
     {
-           id: 7,
-           name: 'Marwan',
-           date: 'Martes, 14 nov 2023',
-           address: 'Joy Eslava, Madrid',
-           imageUrl: 'https://1.bp.blogspot.com/-MJB6AvgoNkc/VmG5EWCgHBI/AAAAAAAASDk/FhDsXI-ELBE/s1600/FR2_2589.jpg',
-           price: 26,
-           distict: 2
-        },
+        id: 7,
+        name: 'Marwan',
+        date: 'Martes, 14 nov 2023',
+        address: 'Joy Eslava, Madrid',
+        imageUrl: 'https://1.bp.blogspot.com/-MJB6AvgoNkc/VmG5EWCgHBI/AAAAAAAASDk/FhDsXI-ELBE/s1600/FR2_2589.jpg',
+        price: 26,
+        distict: 2
+    },
 
 
 ]
