@@ -1,46 +1,47 @@
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import React from 'react'
-import { Calendar } from 'react-native-calendars'; 
+import { Calendar } from 'react-native-calendars';
 
-const EventsCalendar = ({ navigation }) => { 
-  return ( 
-      <View> 
-          <Calendar 
-              markedDates={{ 
-                  '2023-11-04': { selected: true, marked: true }, 
-                  '2023-11-11': { marked: true }, 
-                  '2023-11-18': { 
-                      marked: true, dotColor: 'red', 
-                      activeOpacity: 0 
-                  }, 
-              }} 
+const EventsCalendar = ({ navigation }) => {
+  return (
+      <View>
+          <Calendar
+              markedDates={{
+                  '2023-11-04': { selected: true, marked: true },
+                  '2023-11-11': { marked: true },
+                  '2023-11-14': { marked: true },
+                  '2023-11-18': {
+                      marked: true, dotColor: 'red',
+                      activeOpacity: 0
+                  },
+              }}
               onDayPress={() => navigation.navigate(
                 'ListScreen')}
-              theme={{ 
-                  backgroundColor: '#ffffff', 
-                  calendarBackground: '#415A77', 
-                  textSectionTitleColor: '#b6c1cd', 
-                  selectedDayBackgroundColor: '#00adf5', 
-                  selectedDayTextColor: '#ffffff', 
-                  todayTextColor: '#00adf5', 
-                  dayTextColor: '#C9ADA7', 
-                  textDisabledColor: '#d9e1e8', 
-                  dotColor: '#00adf5', 
-                  selectedDotColor: '#ffffff', 
-                  arrowColor: '#00adf5', 
-                  monthTextColor: '#00adf5', 
-                  indicatorColor: 'blue', 
-                  textDayFontFamily: 'monospace', 
-                  textMonthFontFamily: 'monospace', 
-                  textDayHeaderFontFamily: 'monospace', 
-                  textDayFontSize: 16, 
-                  textMonthFontSize: 16, 
-                  textDayHeaderFontSize: 16 
-              }} 
-          /> 
-      </View> 
-  ); 
-}; 
+              theme={{
+                  backgroundColor: '#ffffff',
+                  calendarBackground: '#415A77',
+                  textSectionTitleColor: '#b6c1cd',
+                  selectedDayBackgroundColor: '#00adf5',
+                  selectedDayTextColor: '#ffffff',
+                  todayTextColor: '#00adf5',
+                  dayTextColor: '#C9ADA7',
+                  textDisabledColor: '#d9e1e8',
+                  dotColor: '#00adf5',
+                  selectedDotColor: '#ffffff',
+                  arrowColor: '#00adf5',
+                  monthTextColor: '#00adf5',
+                  indicatorColor: 'blue',
+                  textDayFontFamily: 'monospace',
+                  textMonthFontFamily: 'monospace',
+                  textDayHeaderFontFamily: 'monospace',
+                  textDayFontSize: 16,
+                  textMonthFontSize: 16,
+                  textDayHeaderFontSize: 16
+              }}
+          />
+      </View>
+  );
+};
 
 export default function DateScreen({ navigation }) {
   return (
