@@ -48,13 +48,33 @@ const eventsArray =[
       price: 25,
       distict: 4
     },
+    {
+       id: 6,
+       name: 'Luis Ramiro',
+       date: 'Sab, 4 nov 2023',
+       address: 'Libertad 8, Madrid',
+       imageUrl: 'https://4.bp.blogspot.com/_oYJ2RmSEWgY/S811H-eFr1I/AAAAAAAAAGY/LxCKPUyKdg0/s1600/LUIS+EXTERIOR+1.jpeg',
+       price: 15,
+       distict: 1
+    },
+    {
+           id: 7,
+           name: 'Marwan',
+           date: 'Martes, 14 nov 2023',
+           address: 'Joy Eslava, Madrid',
+           imageUrl: 'https://1.bp.blogspot.com/-MJB6AvgoNkc/VmG5EWCgHBI/AAAAAAAASDk/FhDsXI-ELBE/s1600/FR2_2589.jpg',
+           price: 26,
+           distict: 2
+        },
+
+
 ]
 
 
 export default function EventList() {
   return (
     <View>
-      <ScrollView style={styles.container} scrollEnabled={false} >   
+      <ScrollView style={styles.container} scrollEnabled={false} >
         {eventsArray.map( ({id,name,date,address,imageUrl,price}) =>
             (
                 <Event key={id}  name={name} date={date} address={address} imageUrl={imageUrl} price={price}/>
