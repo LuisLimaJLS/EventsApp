@@ -9,16 +9,18 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import ListScreen from './screens/ListScreen';
 import DateScreen from './screens/DateScreen';
 import FormScreen from './screens/FormScreen';
+import DistrictScreen from './screens/DistrictScreen';
 //Navigator stack type
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="ListScreen">
+      <Stack.Navigator initialRouteName="DistrictScreen">
         <Stack.Screen name="ListScreen" component={ListScreen} options={{title:"Lista de Eventos"}}/>
         <Stack.Screen name="DateScreen" component={DateScreen} options={{title:"Eventos por fecha"}}/>
         <Stack.Screen name="FormScreen" component={FormScreen} options={{title:"Nuevo evento"}}/>
+        <Stack.Screen name="DistrictScreen" component={DistrictScreen} options={{title:"Distrito"}}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
