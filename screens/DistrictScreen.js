@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, SafeAreaView, ScrollView, StyleSheet, TouchableOpacity, Text } from 'react-native';
 import DistrictList from '../components/DistrictList';
-import { Ionicons } from '@expo/vector-icons'; // Importa un icono de la biblioteca de Expo
+import { Ionicons } from '@expo/vector-icons'; // Importar iconos de la biblioteca de Expo
 
 export default function DistrictScreen({ navigation }) {
   const navigateToScreen = (screenName) => {

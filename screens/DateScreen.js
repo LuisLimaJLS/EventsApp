@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { Calendar } from 'react-native-calendars';
-import { Ionicons } from '@expo/vector-icons'; // Importa un icono de la biblioteca de Expo
+import { Ionicons } from '@expo/vector-icons'; // Importa iconos
 
 const EventsCalendar = ({ navigation }) => {
   return (
