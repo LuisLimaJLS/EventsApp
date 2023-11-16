@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, SafeAreaView, ScrollView, StyleSheet, TouchableOpacity, Text } from 'react-native';
 import DistrictList from '../components/DistrictList';
+import { Ionicons } from '@expo/vector-icons'; // Importa un icono de la biblioteca de Expo
 
 export default function DistrictScreen({ navigation }) {
   const navigateToScreen = (screenName) => {
@@ -11,10 +12,12 @@ export default function DistrictScreen({ navigation }) {
     <View style={styles.container}>
       <View style={styles.menuButton}>
         <TouchableOpacity onPress={() => navigateToScreen('DistrictScreen')} style={styles.appButtonContainer}>
-          <Text style={styles.appButtonText}>Distritos</Text>
+          <Ionicons name="ios-map" size={24} color="#E0E1DD" />
+          <Text style={styles.appButtonText}> Distritos</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigateToScreen('DateScreen')} style={styles.appButtonContainer}>
-          <Text style={styles.appButtonText}>Calendario</Text>
+          <Ionicons name="ios-calendar" size={24} color="#E0E1DD" />
+          <Text style={styles.appButtonText}> Calendario</Text>
         </TouchableOpacity>
       </View>
       <SafeAreaView style={styles.container}>
@@ -28,22 +31,24 @@ export default function DistrictScreen({ navigation }) {
 
 const styles = StyleSheet.create({
   appButtonContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
     elevation: 8,
     backgroundColor: "#C9ADA7",
     borderRadius: 1,
     paddingVertical: 10,
     paddingHorizontal: 12,
     marginBottom: 4,
-    flex: 1,
     borderColor: "#1B263B",
     borderWidth: 1,
+    flex: 1,
   },
   appButtonText: {
     fontSize: 14,
     color: "#E0E1DD",
     fontWeight: "bold",
-    alignSelf: "center",
-    textTransform: "uppercase"
+    marginLeft: 8,
+    textTransform: "uppercase",
   },
   container: {
     backgroundColor: "#1B263B",
@@ -52,9 +57,8 @@ const styles = StyleSheet.create({
   menuButton: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between', // Añadido para separar los botones
-    paddingHorizontal: 20, // Añadido para espacio en los lados
-    paddingVertical: 10, // Añadido para espacio arriba y abajo
+    justifyContent: 'space-between',
+    paddingHorizontal: 20,
+    paddingVertical: 10,
   },
-
 });
