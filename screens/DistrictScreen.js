@@ -54,5 +54,5 @@ const styles = StyleSheet.create({
   menuButton: {
     flexDirection: 'row',
     alignItems: 'center',
-},
+  },
 });
