@@ -1,12 +1,26 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
+//use Navigator
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+//Import Screens
+import ListScreen from './screens/ListScreen';
+import DateScreen from './screens/DateScreen';
+import FormScreen from './screens/FormScreen';
+//Navigator stack type
+const Stack = createNativeStackNavigator();
+
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="ListScreen">
+        <Stack.Screen name="ListScreen" component={ListScreen} options={{title:"Lista de Eventos"}}/>
+        <Stack.Screen name="DateScreen" component={DateScreen} options={{title:"Eventos por fecha"}}/>
+        <Stack.Screen name="FormScreen" component={FormScreen} options={{title:"Nuevo evento"}}/>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
