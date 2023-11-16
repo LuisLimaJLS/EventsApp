@@ -16,7 +16,7 @@ export default function FormScreen() {
             price: '15',
             district: '1',
           }}
-          onSubmit={(values) => console.log(values)}
+          onSubmit={(values) => console.log('Form Submitted:', values);}
         >
           {({ handleChange, handleBlur, handleSubmit, values }) => (
             <View>

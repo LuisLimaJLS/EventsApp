@@ -1,41 +1,48 @@
-import { View, Text, Button, SafeAreaView, ScrollView, StyleSheet,TouchableOpacity } from 'react-native'
-import React from 'react'
-import EventList from '../components/EventList'
+import React from 'react';
+import { View, Text, TouchableOpacity, SafeAreaView, ScrollView, StyleSheet } from 'react-native';
+import EventList from '../components/EventList';
+
 export default function ListScreen({ navigation }) {
+  const navigateToFormScreen = () => {
+    navigation.navigate('FormScreen');
+  };
+
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={() => navigation.navigate(
-            'FormScreen'
-        )} style={styles.appButtonContainer}>
-        <Text style={styles.appButtonText}>{"Nuevo Evento"}</Text>
+      <TouchableOpacity onPress={navigateToFormScreen} style={styles.newEventButton}>
+        <Text style={styles.newEventButtonText}>Nuevo Evento</Text>
       </TouchableOpacity>
-      <SafeAreaView>
+      <SafeAreaView style={styles.safeArea}>
         <ScrollView>
-          <EventList/>
+          <EventList />
         </ScrollView>
       </SafeAreaView>
     </View>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
-  // ...
-  appButtonContainer: {
-    elevation: 8,
+  container: {
+    flex: 1,
+    backgroundColor: "#1B263B",
+    padding: 20,
+  },
+  newEventButton: {
     backgroundColor: "#C9ADA7",
-    borderRadius: 1,
+    borderRadius: 5,
     paddingVertical: 10,
     paddingHorizontal: 12,
-    marginBottom:4
+    marginBottom: 20,
+    alignSelf: "center",
   },
-  appButtonText: {
-    fontSize: 14,
+  newEventButtonText: {
+    fontSize: 16,
     color: "#E0E1DD",
     fontWeight: "bold",
-    alignSelf: "center",
-    textTransform: "uppercase"
+    textTransform: "uppercase",
+    textAlign: "center",
   },
-  container:{
-    backgroundColor: "#1B263B",
+  safeArea: {
+    flex: 1,
   },
 });
