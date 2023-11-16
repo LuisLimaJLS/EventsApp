@@ -13,8 +13,8 @@ export default function Event({id,name,date,address,imageUrl,price}) {
         <View style={styles.eventCardDetail}>
             <Text style={styles.eventName}>{name}</Text>
             <View style={styles.eventCard}>
-                <Text style={styles.eventDetail}>{date}</Text> 
-                <Text style={styles.eventDetail}> | </Text> 
+                <Text style={styles.eventDetail}>{date}</Text>
+                <Text style={styles.eventDetail}> | </Text>
                 <Text style={styles.eventDetail}>{address}</Text>
             </View>
             <Text style={styles.eventDetail}>$ {price}</Text>
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         marginBottom: 3,
-        backgroundColor: '#415A77',
+        backgroundColor: '#8e8f91',
         padding: 8,
         borderRadius: 10
     },
