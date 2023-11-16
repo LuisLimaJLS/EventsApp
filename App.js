@@ -20,7 +20,7 @@ export default function App() {
         <Stack.Screen name="ListScreen" component={ListScreen} options={{title:"Lista de Eventos"}}/>
         <Stack.Screen name="DateScreen" component={DateScreen} options={{title:"Eventos por fecha"}}/>
         <Stack.Screen name="FormScreen" component={FormScreen} options={{title:"Nuevo evento"}}/>
-        <Stack.Screen name="DistrictScreen" component={DistrictScreen} options={{title:"Distrito"}}/>
+        <Stack.Screen name="DistrictScreen" component={DistrictScreen} options={{title:"Eventos por Distrito"}}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -29,7 +29,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#0D1B2A',
     alignItems: 'center',
     justifyContent: 'center',
   },
