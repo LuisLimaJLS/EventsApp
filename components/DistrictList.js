@@ -32,7 +32,7 @@ export default function DistrictList({ navigation, eventsArray }) {
       <ScrollView style={styles.container} scrollEnabled={false} >   
         {districtsArray.map( ({id,name}) =>
             (
-                <District key={id}  name={name} navigation={navigation} eventsArray={eventsArray}/>
+                <District key={id} id={id}  name={name} navigation={navigation} eventsArray={eventsArray}/>
             )
         )}
       </ScrollView>

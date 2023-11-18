@@ -3,14 +3,14 @@ import React from 'react'
 import { Ionicons } from '@expo/vector-icons';
 
 export default function District({id,name, navigation, eventsArray}) {
-  return (
+    return (
     <View style={styles.districtCard}>
         <View style={styles.districtCardB}>
         <Text style={styles.districtName}>{name}</Text>
         </View>
         <View style={styles.districtCardC}>
             <TouchableOpacity onPress={() => navigation.navigate(
-                    'ListScreen', eventsArray
+                    'ListScreen', eventsArray.filter(x => x.distict == id)
                 )} style={styles.appButtonContainer}>
                 <Ionicons name="md-arrow-forward-outline" size={24} color="#E0E1DD" />
             </TouchableOpacity>
