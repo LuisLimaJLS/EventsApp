@@ -2,7 +2,11 @@ import React from 'react';
 import { View, Text, TouchableOpacity, SafeAreaView, ScrollView, StyleSheet } from 'react-native';
 import EventList from '../components/EventList';
 
-export default function ListScreen({ navigation }) {
+
+export default function ListScreen({ route, navigation }) {
+
+  var eventsArray = route.params
+
   const navigateToFormScreen = () => {
     navigation.navigate('FormScreen');
   };
@@ -14,7 +18,7 @@ export default function ListScreen({ navigation }) {
       </TouchableOpacity>
       <SafeAreaView style={styles.safeArea}>
         <ScrollView>
-          <EventList />
+          <EventList eventsArray={eventsArray}/>
         </ScrollView>
       </SafeAreaView>
     </View>

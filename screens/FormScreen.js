@@ -8,6 +8,7 @@ export default function FormScreen() {
       <View style={styles.container}>
         <Formik
           initialValues={{
+            id: 20,
             name: 'Alejandro Sanz',
             date: 'Sab, 02 dic 2023',
             address: 'Madrid',
@@ -69,7 +70,7 @@ export default function FormScreen() {
                 placeholder="Distrito"
                 keyboardType="numeric"
               />
-              <Button style={styles.appButtonContainer} onPress={handleSubmit} title="Guardar" />
+              <Button onPress={handleSubmit} title="Guardar" />
             </View>
           )}
         </Formik>

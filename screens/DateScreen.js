@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { Calendar } from 'react-native-calendars';
 import { Ionicons } from '@expo/vector-icons'; // Importa iconos
 
-const EventsCalendar = ({ navigation }) => {
+const EventsCalendar = ({ navigation, eventsArray }) => {
   return (
     <View style={styles.calendarContainer}>
       <Calendar
@@ -13,7 +13,7 @@ const EventsCalendar = ({ navigation }) => {
           '2023-11-14': { marked: true },
           '2023-11-18': { marked: true, dotColor: 'red' },
         }}
-        onDayPress={() => navigation.navigate('ListScreen')}
+        onDayPress={() => navigation.navigate('ListScreen', eventsArray)}
         theme={{
           backgroundColor: '#ffffff',
           calendarBackground: '#415A77',
@@ -40,7 +40,10 @@ const EventsCalendar = ({ navigation }) => {
   );
 };
 
-const DateScreen = ({ navigation }) => {
+const DateScreen = ({ route, navigation}) => {
+
+  var eventsArray = route.params
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -48,21 +51,21 @@ const DateScreen = ({ navigation }) => {
       </View>
       <View style={styles.menuButton}>
         <TouchableOpacity
-          onPress={() => navigation.navigate('DistrictScreen')}
+          onPress={() => navigation.navigate('DistrictScreen', eventsArray)}
           style={styles.appButtonContainer}
         >
           <Ionicons name="md-map" size={24} color="#E0E1DD" />
           <Text style={styles.buttonText}>Distritos</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => navigation.navigate('DateScreen')}
+          onPress={() => navigation.navigate('DateScreen', eventsArray)}
           style={styles.appButtonContainerPress}
         >
           <Ionicons name="md-calendar" size={24} color="#E0E1DD" />
           <Text style={styles.buttonText}>Calendario</Text>
         </TouchableOpacity>
       </View>
-      <EventsCalendar navigation={navigation} />
+      <EventsCalendar navigation={navigation} eventsArray={eventsArray}/>
     </View>
   );
 };

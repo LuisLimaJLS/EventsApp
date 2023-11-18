@@ -2,7 +2,7 @@ import { StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native'
 import React from 'react'
 import { Ionicons } from '@expo/vector-icons';
 
-export default function District({id,name, navigation}) {
+export default function District({id,name, navigation, eventsArray}) {
   return (
     <View style={styles.districtCard}>
         <View style={styles.districtCardB}>
@@ -10,7 +10,7 @@ export default function District({id,name, navigation}) {
         </View>
         <View style={styles.districtCardC}>
             <TouchableOpacity onPress={() => navigation.navigate(
-                    'ListScreen'
+                    'ListScreen', eventsArray
                 )} style={styles.appButtonContainer}>
                 <Ionicons name="md-arrow-forward-outline" size={24} color="#E0E1DD" />
             </TouchableOpacity>

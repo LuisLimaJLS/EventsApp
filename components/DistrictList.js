@@ -26,13 +26,13 @@ const districtsArray =[
 ]
 
 
-export default function DistrictList({ navigation }) {
+export default function DistrictList({ navigation, eventsArray }) {
   return (
     <View>
       <ScrollView style={styles.container} scrollEnabled={false} >   
         {districtsArray.map( ({id,name}) =>
             (
-                <District key={id}  name={name} navigation={navigation}/>
+                <District key={id}  name={name} navigation={navigation} eventsArray={eventsArray}/>
             )
         )}
       </ScrollView>
