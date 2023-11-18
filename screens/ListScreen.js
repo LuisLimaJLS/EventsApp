@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState , useEffect} from 'react';
 import { View, Text, TouchableOpacity, SafeAreaView, ScrollView, StyleSheet } from 'react-native';
 import EventList from '../components/EventList';
 
@@ -8,7 +8,7 @@ export default function ListScreen({ route, navigation }) {
   var eventsArray = route.params
 
   const navigateToFormScreen = () => {
-    navigation.navigate('FormScreen');
+    navigation.navigate('FormScreen', eventsArray);
   };
 
   return (

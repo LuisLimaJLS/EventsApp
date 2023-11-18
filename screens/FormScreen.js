@@ -2,7 +2,10 @@ import { View, Text, TextInput, Button, KeyboardAvoidingView, StyleSheet } from 
 import React from 'react';
 import { Formik } from 'formik';
 
-export default function FormScreen() {
+export default function FormScreen({ route, navigation}) {
+
+  var eventsArray = route.params
+
   return (
     <KeyboardAvoidingView behavior="padding" style={styles.containerView}>
       <View style={styles.container}>
@@ -14,9 +17,19 @@ export default function FormScreen() {
             address: 'Madrid',
             imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Alejandro_Sanz_-_Cap_Roig_2016.jpg/330px-Alejandro_Sanz_-_Cap_Roig_2016.jpg',
             price: 15,
-            district: 2,
+            distict: 2,
           }}
-          onSubmit={(values) => console.log('Form Submitted:', values)}
+          onSubmit={
+            //guardar nuevo registro en el array
+            (values) => {
+              console.log('new value:', values)
+              navigation.navigate({
+              name: 'DistrictScreen', 
+              params: {eventsArrayVal: values},
+              merge: true,
+            })
+          }
+          }
         >
           {({ handleChange, handleBlur, handleSubmit, values }) => (
             <View>
@@ -64,9 +77,9 @@ export default function FormScreen() {
               <Text style={styles.labelInput}>Distrito:</Text>
               <TextInput
                 style={styles.input}
-                onChangeText={handleChange('district')}
-                onBlur={handleBlur('district')}
-                value={values.district}
+                onChangeText={handleChange('distict')}
+                onBlur={handleBlur('distict')}
+                value={values.distict}
                 placeholder="Distrito"
                 keyboardType="numeric"
               />
