@@ -46,17 +46,17 @@ const DateScreen = ({ navigation }) => {
       <View style={styles.header}>
         <Text style={styles.title}>Calendario</Text>
       </View>
-      <View style={styles.menuButtons}>
+      <View style={styles.menuButton}>
         <TouchableOpacity
           onPress={() => navigation.navigate('DistrictScreen')}
-          style={styles.button}
+          style={styles.appButtonContainer}
         >
           <Ionicons name="md-map" size={24} color="#E0E1DD" />
           <Text style={styles.buttonText}>Distritos</Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => navigation.navigate('DateScreen')}
-          style={styles.button}
+          style={styles.appButtonContainerPress}
         >
           <Ionicons name="md-calendar" size={24} color="#E0E1DD" />
           <Text style={styles.buttonText}>Calendario</Text>
@@ -82,18 +82,37 @@ const styles = StyleSheet.create({
     color: '#E0E1DD',
     fontWeight: 'bold',
   },
-  menuButtons: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    paddingHorizontal: 20,
-    marginBottom: 10,
-  },
-  button: {
+  menuButton: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#C9ADA7',
-    borderRadius: 5,
-    padding: 10,
+    justifyContent: 'space-between',
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+  },
+  appButtonContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    elevation: 8,
+    backgroundColor: "#C9ADA7",
+    borderRadius: 1,
+    paddingVertical: 10,
+    paddingHorizontal: 12,
+    marginBottom: 4,
+    borderColor: "#1B263B",
+    borderWidth: 1,
+    flex: 1,
+  },
+  appButtonContainerPress: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    elevation: 8,
+    backgroundColor: "#B5968F",
+    borderRadius: 1,
+    paddingVertical: 10,
+    paddingHorizontal: 12,
+    marginBottom: 4,
+    borderColor: "#1B263B",
+    borderWidth: 1,
     flex: 1,
   },
   buttonText: {

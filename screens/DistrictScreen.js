@@ -10,8 +10,11 @@ export default function DistrictScreen({ navigation }) {
 
   return (
     <View style={styles.container}>
+      <View style={styles.header}>
+        <Text style={styles.title}>Distritos</Text>
+      </View>
       <View style={styles.menuButton}>
-        <TouchableOpacity onPress={() => navigateToScreen('DistrictScreen')} style={styles.appButtonContainer}>
+        <TouchableOpacity onPress={() => navigateToScreen('DistrictScreen')} style={styles.appButtonContainerPress}>
           <Ionicons name="ios-map" size={24} color="#E0E1DD" />
           <Text style={styles.appButtonText}> Distritos</Text>
         </TouchableOpacity>
@@ -43,6 +46,19 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     flex: 1,
   },
+  appButtonContainerPress: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    elevation: 8,
+    backgroundColor: "#B5968F",
+    borderRadius: 1,
+    paddingVertical: 10,
+    paddingHorizontal: 12,
+    marginBottom: 4,
+    borderColor: "#1B263B",
+    borderWidth: 1,
+    flex: 1,
+  },
   appButtonText: {
     fontSize: 14,
     color: "#E0E1DD",
@@ -60,5 +76,15 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingHorizontal: 20,
     paddingVertical: 10,
+  },
+  header: {
+    alignItems: 'center',
+    paddingVertical: 10,
+    backgroundColor: '#415A77',
+  },
+  title: {
+    fontSize: 18,
+    color: '#E0E1DD',
+    fontWeight: 'bold',
   },
 });

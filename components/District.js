@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native'
 import React from 'react'
+import { Ionicons } from '@expo/vector-icons';
 
 export default function District({id,name, navigation}) {
   return (
@@ -11,7 +12,7 @@ export default function District({id,name, navigation}) {
             <TouchableOpacity onPress={() => navigation.navigate(
                     'ListScreen'
                 )} style={styles.appButtonContainer}>
-                <Text style={styles.appButtonText}>{" >> "}</Text>
+                <Ionicons name="md-arrow-forward-outline" size={24} color="#E0E1DD" />
             </TouchableOpacity>
         </View>
     </View>
@@ -29,7 +30,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         marginBottom: 4,
-        backgroundColor: '#1595b2',
+        backgroundColor: '#415A77',
         padding: 8,
         borderRadius: 10
     },
@@ -48,7 +49,7 @@ const styles = StyleSheet.create({
     districtName: {
         fontSize: 16,
         fontWeight: '600',
-        color: '#1547b2'
+        color: '#E0E1DD'
     },
     districtDetail: {
         fontSize: 12,
@@ -63,10 +64,12 @@ const styles = StyleSheet.create({
         marginBottom:4,
         marginRight: 0,
         width: 60,
+        borderWidth: 1,
+        borderColor: "#E0E1DD",
     },
     appButtonText: {
         fontSize: 14,
-        color: "#2d2d2a",
+        color: "#E0E1DD",
         fontWeight: "bold",
         alignSelf: "center",
         textTransform: "uppercase"
